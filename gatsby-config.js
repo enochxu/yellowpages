@@ -4,5 +4,8 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-layout`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
   ],
 }

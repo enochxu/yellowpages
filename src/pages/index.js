@@ -28,13 +28,13 @@ const restrooms =
   [
     {
       name: "Restroom 1",
-      rating: "4.5",
+      ratingValue: "4.5",
       distance: "1.0",
       genders: "M/F"
     }, 
     {
       name: "Restroom 2",
-      rating: "4.5",
+      ratingValue: "4.5",
       distance: "1.0",
       genders: "M/F" 
     }
@@ -48,12 +48,11 @@ const IndexPage = () => {
       <title>yellowpages</title>
       <div className="featured">
         <h1>Top Rated For You</h1>
-        <img src={ack1} style={{height: "100px", width: "200px", objectFit: "none"}}/>
         <Carousel responsive={responsive}>
-          <Card name="Ackerman Grand Ballroom" rating="urmom" img={ack1}/>
-          <Card name="bruh" rating="urmom"/>
-          <Card name="bruh" rating="urmom"/>
-          <Card name="bruh" rating="urmom"/>
+          <Card name="Ackerman Grand Ballroom" ratingValue="4.8"  image="https://i.ibb.co/2c90ZNw/ackerman-bathroom.jpg" distance="0.0 mi away"/>
+          <Card name="Olympic Hall 9" ratingValue="5.0" image="https://i.ibb.co/4gSBtM4/olympic-sinks.jpg" distance="0.5 mi away"/>
+          <Card name="bruh" ratingValue="3.2" distance="1.0 mi away"/>
+          <Card name="bruh" ratingValue="1.0" distance="1.0 mi away"/>
         </Carousel>
         
         {/* <reviewCarousel>
