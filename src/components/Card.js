@@ -7,8 +7,6 @@ const Card = ({image, name, ratingValue, distance, genders}) => {
     <div className="card">
       <div class="cardImage">
         <img src={image}
-        width={250}
-        height={180}
         class="rounded"
         />
       </div>
