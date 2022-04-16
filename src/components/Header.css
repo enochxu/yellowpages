@@ -1,11 +1,27 @@
 .navbar {
-    left: 50px;
-    right: 50px;
-    top: 20px;
-    vertical-align: bottom;
+  left: 50px;
+  right: 50px;
+  top: 20px;
+  vertical-align: bottom;
 }
 
-.form {
-    width: 100%;
-    vertical-align: bottom;
+.navbar-nav {
+  margin-left: 5% !important;
+  margin-top: 1%;
+}
+
+.search-box {
+  border-radius: 20px 0px 0px 20px !important;
+  border: 2px solid #808080;
+}
+
+.btn {
+  border: 0px !important;
+  background-color: #ffcb37 !important;
+  border-radius: 0px 20px 20px 0px !important;
+  color: black !important;
+}
+
+.btn:hover {
+  color: black !important;
 }
