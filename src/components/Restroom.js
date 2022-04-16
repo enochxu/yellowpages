@@ -1,50 +1,78 @@
-import React from 'react';
-import Rating from '@mui/material/Rating';
-import BookmarkAddIcon from '@mui/icons-material/BookmarkAdd';
-import Button from '@mui/material/Button';
-import ReviewCard from './ReviewCard';
-import "./Restroom.css"
-import { textAlign } from '@mui/system';
+import React, { useState } from "react";
+import Rating from "@mui/material/Rating";
+import BookmarkAddIcon from "@mui/icons-material/BookmarkAdd";
+import Button from "@mui/material/Button";
+import ToggleButton from "@mui/material/ToggleButton";
+import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
+import ReviewCard from "./ReviewCard";
+import "./Restroom.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
-/*
-        To-do:
-            - pass in name, rating, reviews
+const Restroom = (name, gender) => {
+  const [value, setValue] = React.useState(4);
+  const [restroomType, setRestroomType] = useState([
+    "gender-neutral",
+    "women",
+    "men",
+  ]);
 
-        Extra-features:
-            - add a section to show what toilet offers
-                (sinks, toilets, urinals, showers, etc.)
-    */
-
-function Restroom({name, rating, reviews}) {
-    // const [ratingStar, setRatingStar] = React.useState(rating);
+  const ToggleType = () => {
+    const handleRestroomType = (event, newRestroomType) => {
+      setRestroomType(newRestroomType);
+    };
 
     return (
-        <>
-        <div className='restroom'>
-            <div className='header'>
-                <h2>{name}</h2>
-                <div className='sub'>
-                    <div className='rating'>
-                        <p>{rating}.0/5</p>
-                        <Rating name="read-only" value={rating} readOnly />
-                    </div>
-                    <div className='save'>
-                        <BookmarkAddIcon />
-                    </div>
-                </div>
-            </div>
-            <div className='photo-section'>
-                <h3>Photos</h3>
-                <div className='photo-gallery'>
-                    <img src='https://i.ibb.co/2c90ZNw/ackerman-bathroom.jpg' className='photos' alt='bathroom'/>
-                    <img className='photos' alt='bathroom'/>
-                    <img className='photos' alt='bathroom'/>
-                    <img className='photos' alt='bathroom'/>
-                    <img className='photos' alt='bathroom'/>
-                    <img className='photos' alt='bathroom'/>
-                </div>
-            </div>
+      <ToggleButtonGroup
+        value={restroomType}
+        onChange={handleRestroomType}
+        color="primary"
+        aria-label="toggle displaying gender neutral, women's, or men's restrooms"
+      >
+        <ToggleButton value="gender-neutral" aria-label="gender neutral">
+          <i class="bi-gender-ambiguous"></i>
+        </ToggleButton>
+        <ToggleButton value="women" aria-label="women">
+          <i class="bi-gender-female"></i>
+        </ToggleButton>
+        <ToggleButton value="men" aria-label="men">
+          <i class="bi-gender-male"></i>
+        </ToggleButton>
+      </ToggleButtonGroup>
+    );
+  };
+
+  return (
+    <>
+      <div className="restroom">
+        <div className="header">
+          <h2>{name}</h2>
+          <ToggleType />
+              <div className='sub'>
+                  <div className='rating'>
+                      <p>{rating}.0/5</p>
+                      <Rating name="read-only" value={rating} readOnly />
+                  </div>
+                  <div className='save'>
+                      <BookmarkAddIcon />
+                  </div>
+              </div>
         </div>
+        <div className="photo-section">
+          <h3>Photos</h3>
+          <div className="photo-gallery">
+            <img
+              src="https://i.ibb.co/2c90ZNw/ackerman-bathroom.jpg"
+              className="photos"
+              alt="bathroom"
+            />
+            <img className="photos" alt="bathroom" />
+            <img className="photos" alt="bathroom" />
+            <img className="photos" alt="bathroom" />
+            <img className="photos" alt="bathroom" />
+            <img className="photos" alt="bathroom" />
+          </div>
+        </div>
+      </div>
         <div className='reviews'>
             <h3 className='review-header'>Reviews</h3>
             <div className="reviews-section">
@@ -57,8 +85,9 @@ function Restroom({name, rating, reviews}) {
                 </Button>
             </div>
         </div>
-        </>
-    )
-}
+      </div>
+    </>
+  );
+};
 
-export default Restroom
+export default Restroom;
