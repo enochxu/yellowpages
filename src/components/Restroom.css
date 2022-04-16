@@ -46,12 +46,13 @@
 }
 
 .reviews-section {
+    text-align: center;
     background-color: #FDF5EA;
-    height: 400px;
     padding: 30px;
 }
 
 .review-bubbles {
+    text-align: left;
     display: flex;
     justify-content: space-evenly;
     padding-bottom: 10px;
@@ -59,5 +60,12 @@
 
 .more-btn {
     width: 5vw;
-    margin-left: 45vw;
+    background-color: white !important;
+    color: black !important;
+    text-transform: unset !important;
+    border-radius:20px !important;
+}
+.more-btn:hover {
+    background-color: #FFCB37 !important;
+    color: black !important;
 }
