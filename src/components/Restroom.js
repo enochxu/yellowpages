@@ -1,9 +1,10 @@
 import React from 'react';
 import Rating from '@mui/material/Rating';
 import BookmarkAddIcon from '@mui/icons-material/BookmarkAdd';
+import Button from '@mui/material/Button';
 import "./Restroom.css"
 
-function Restroom(name) {
+function Restroom(name, gender) {
     const [value, setValue] = React.useState(4);
 
     /*
@@ -17,6 +18,7 @@ function Restroom(name) {
     */
 
     return (
+        <>
         <div className='restroom'>
             <div className='header'>
                 <h2>Name of Restroom</h2>
@@ -33,18 +35,25 @@ function Restroom(name) {
             <div className='photo-section'>
                 <h3>Photos</h3>
                 <div className='photo-gallery'>
-                    <img className='photos' />
-                    <img className='photos' />
-                    <img className='photos' />
-                    <img className='photos' />
-                    <img className='photos' />
-                    <img className='photos' />
+                    <img src='https://i.ibb.co/2c90ZNw/ackerman-bathroom.jpg' className='photos' alt='bathroom'/>
+                    <img className='photos' alt='bathroom'/>
+                    <img className='photos' alt='bathroom'/>
+                    <img className='photos' alt='bathroom'/>
+                    <img className='photos' alt='bathroom'/>
+                    <img className='photos' alt='bathroom'/>
                 </div>
             </div>
-            <div className='reviews-section'>
-                <h3>Reviews</h3>
+        </div>
+        <div className='reviews'>
+            <h3 className='review-header'>Reviews</h3>
+            <div className="reviews-section">
+                <div className='review-bubbles'></div>
+                <Button variant="contained" size="medium">
+                    More
+                </Button>
             </div>
         </div>
+        </>
     )
 }
 
