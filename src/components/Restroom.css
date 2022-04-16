@@ -48,9 +48,16 @@
 .reviews-section {
     background-color: #FDF5EA;
     height: 400px;
+    padding: 30px;
 }
 
 .review-bubbles {
-    display: grid;
-    columns: 2;
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 10px;
+}
+
+.more-btn {
+    width: 5vw;
+    margin-left: 45vw;
 }
