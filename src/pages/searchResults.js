@@ -1,4 +1,5 @@
 import * as React from "react";
+import "./searchResults.css";
 
 const ResultsPage = ({ term }) => {
   return (
