@@ -1,13 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import Rating from "@mui/material/Rating";
 import BookmarkAddIcon from "@mui/icons-material/BookmarkAdd";
 import Button from "@mui/material/Button";
+import ToggleButton from "@mui/material/ToggleButton";
+import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 import ReviewCard from "./ReviewCard";
 import "./Restroom.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
-function Restroom(name, gender) {
+const Restroom = (name, gender) => {
   const [value, setValue] = React.useState(4);
+  const [restroomType, setRestroomType] = useState([
+    "gender-neutral",
+    "women",
+    "men",
+  ]);
 
+  const ToggleType = () => {
+    const handleRestroomType = (event, newRestroomType) => {
+      setRestroomType(newRestroomType);
+    };
+
+    return (
+      <ToggleButtonGroup
+        value={restroomType}
+        onChange={handleRestroomType}
+        color="primary"
+        aria-label="toggle displaying gender neutral, women's, or men's restrooms"
+      >
+        <ToggleButton value="gender-neutral" aria-label="gender neutral">
+          <i class="bi-gender-ambiguous"></i>
+        </ToggleButton>
+        <ToggleButton value="women" aria-label="women">
+          <i class="bi-gender-female"></i>
+        </ToggleButton>
+        <ToggleButton value="men" aria-label="men">
+          <i class="bi-gender-male"></i>
+        </ToggleButton>
+      </ToggleButtonGroup>
+    );
+  };
   /*
         To-do:
             - Implement designs from figma first
@@ -21,8 +53,10 @@ function Restroom(name, gender) {
   return (
     <>
       <div className="restroom">
+        {restroomType}
         <div className="header">
           <h2>Name of Restroom</h2>
+          <ToggleType />
           <div className="sub">
             <div className="rating">
               <p>4.0/5</p>
@@ -67,6 +101,6 @@ function Restroom(name, gender) {
       </div>
     </>
   );
-}
+};
 
 export default Restroom;

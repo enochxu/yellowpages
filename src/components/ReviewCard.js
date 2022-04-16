@@ -4,7 +4,7 @@ import { Card, Row } from "react-bootstrap";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "./ReviewCard.css";
 
-const restroomTypes = new Map([
+export const restroomTypes = new Map([
   ["gender-neutral", "bi-gender-ambiguous"],
   ["women", "bi-gender-female"],
   ["men", "bi-gender-male"],
