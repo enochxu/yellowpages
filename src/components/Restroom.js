@@ -50,9 +50,9 @@ function Restroom(name, gender) {
             <div className="reviews-section">
                 <div className='review-bubbles'>
                     <ReviewCard name='Ackerman' rating='5' reviewText='#blessed' />
-                    
+                    <ReviewCard name='Kaplan' rating='5' reviewText='#blessed' />
                 </div>
-                <Button variant="contained" size="medium">
+                <Button className='more-btn' variant="contained" size="medium">
                     More
                 </Button>
             </div>
