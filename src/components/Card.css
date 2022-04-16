@@ -5,8 +5,21 @@
     height: 300px;
 }
 
+.inline-flex {
+    display: inline-flex;
+}
+
 .card h1 {
     font-size: 20px;
+}
+
+.card h2 {
+    font-size: 17px;
+}
+
+.card p {
+    font-size: 13px;
+    color: #808080;
 }
 
 .react-multi-carousel-list {
