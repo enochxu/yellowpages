@@ -17,7 +17,7 @@ const Card = ({image, name, ratingValue, distance, genders}) => {
         <h2>{ratingValue}/5</h2>
           <Rating name="rating-read" value={ratingValue} precision={0.1} size="medium" readOnly />
       </div>
-      <p>{distance}</p>
+      <p>&#x1F6BD;{distance}</p>
     </div>
   )
 }
