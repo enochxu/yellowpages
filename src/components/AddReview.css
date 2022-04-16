@@ -1,0 +1,46 @@
+.container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.container > div {
+    padding: 15px 0px;
+}
+
+.container > .rating {
+    padding: 7.5px 0px;
+}
+
+.gender-button {
+    border: 0px !important;
+    background-color: #ffcb37 !important;
+    border-radius: 20px 20px 20px 20px !important;
+    border: 1px solid black;
+    color: black !important;
+    margin-right: 8px;
+}
+
+.text {
+    width: 100%;
+    height: 300px;
+}
+
+.text > .gender-button {
+    margin-top: 15px;
+    display: flex;
+    float: right;
+    margin-right: 0px;
+}
+
+.textbox {
+    padding: 20px;
+    text-align: start;
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    resize: none;
+}
+
+.textbox::-webkit-scrollbar {
+    display: none;
+  }
