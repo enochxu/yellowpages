@@ -2,10 +2,12 @@ import * as React from "react";
 import Card from "../components/Card";
 import "./searchResults.css";
 
-const ResultsPage = ({ term }) => {
+const ResultsPage = ({ location }) => {
+  const params = new URLSearchParams(location.search);
+  const term = params.get("term");
   return (
     <div className="results">
-      <h2>Results for "<h2 style={{color: "#FFCB37", display: "inline"}}>Ackerman</h2>"</h2>
+      <h2>Results for "<h2 style={{color: "#FFCB37", display: "inline"}}>{ term }</h2>"</h2>
       {/* <div className="search-term">
         <h2>Ackerman</h2>
       </div> */}
