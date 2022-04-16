@@ -4,29 +4,29 @@ import BookmarkAddIcon from '@mui/icons-material/BookmarkAdd';
 import Button from '@mui/material/Button';
 import ReviewCard from './ReviewCard';
 import "./Restroom.css"
+import { textAlign } from '@mui/system';
 
-function Restroom(name, gender) {
-    const [value, setValue] = React.useState(4);
-
-    /*
+/*
         To-do:
-            - Implement designs from figma first
-            - Gender Icon
+            - pass in name, rating, reviews
 
         Extra-features:
             - add a section to show what toilet offers
                 (sinks, toilets, urinals, showers, etc.)
     */
 
+function Restroom({name, rating, reviews}) {
+    // const [ratingStar, setRatingStar] = React.useState(rating);
+
     return (
         <>
         <div className='restroom'>
             <div className='header'>
-                <h2>Name of Restroom</h2>
+                <h2>{name}</h2>
                 <div className='sub'>
                     <div className='rating'>
-                        <p>4.0/5</p>
-                        <Rating name="read-only" value={value} readOnly />
+                        <p>{rating}.0/5</p>
+                        <Rating name="read-only" value={rating} readOnly />
                     </div>
                     <div className='save'>
                         <BookmarkAddIcon />
@@ -49,8 +49,8 @@ function Restroom(name, gender) {
             <h3 className='review-header'>Reviews</h3>
             <div className="reviews-section">
                 <div className='review-bubbles'>
-                    <ReviewCard name='Ackerman' rating='5' reviewText='#blessed' />
-                    <ReviewCard name='Kaplan' rating='5' reviewText='#blessed' />
+                    <ReviewCard name={reviews[0].name} rating={reviews[0].rating} reviewText={reviews[0].reviewText} />
+                    <ReviewCard name={reviews[1].name} rating={reviews[1].rating} reviewText={reviews[1].reviewText} />
                 </div>
                 <Button className='more-btn' variant="contained" size="medium">
                     More
