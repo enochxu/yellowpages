@@ -2,7 +2,7 @@
     padding-top: 20px;
     padding-left: 20px;
     width: 300px;
-    height: 300px;
+    height: 330px;
 }
 
 .cardImage {
@@ -12,7 +12,7 @@
     justify-content: center;
 }
 
-.rating {
+.card-rating {
     display: flex;
 }
 
@@ -28,8 +28,4 @@
 .card p {
     font-size: 13px;
     color: #808080;
-}
-
-.react-multi-carousel-list {
-    /* width: 50%; */
 }
