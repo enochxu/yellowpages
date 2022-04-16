@@ -2,12 +2,27 @@
     padding-top: 20px;
     padding-left: 20px;
     width: 300px;
-    height: 300px;
+    height: 330px;
+    justify-self: center;
+    border-radius: 20px;
 }
 
-.inline-flex {
-    display: inline-flex;
+.cardImage {
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
+
+.cardImage img {
+    object-fit: cover;
+    width: 250px;
+    height: 180px;
+}
+
+.card-rating {
+    display: flex;
+}
+a, a:link, a:visited, a:hover, a:active { text-decoration: none; color: black;}
 
 .card h1 {
     font-size: 20px;
@@ -15,13 +30,10 @@
 
 .card h2 {
     font-size: 17px;
+    padding-top: 2px;
 }
 
 .card p {
     font-size: 13px;
     color: #808080;
-}
-
-.react-multi-carousel-list {
-    /* width: 50%; */
 }

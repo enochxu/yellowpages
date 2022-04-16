@@ -1,5 +1,5 @@
 .restroom {
-    background-color: rgb(218, 214, 214);
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
     padding: 50px;
@@ -8,13 +8,12 @@
 .sub {
     display: flex;
     justify-content: space-between;
-    padding-right: 30px;
 }
 
 .rating {
     display: flex;
     font-weight: bold;
-    margin-left: 1vw;
+    padding-left: 1vw;
 }
 
 .photo-section {
@@ -38,6 +37,35 @@
     height: 300px;
 }
 
-.reviews-section {
+.reviews {
     margin-top: 30px;
+}
+
+.review-header {
+    padding-left: 50px;
+}
+
+.reviews-section {
+    text-align: center;
+    background-color: #FDF5EA;
+    padding: 30px;
+}
+
+.review-bubbles {
+    text-align: left;
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 10px;
+}
+
+.more-btn {
+    width: 5vw;
+    background-color: white !important;
+    color: black !important;
+    text-transform: unset !important;
+    border-radius:20px !important;
+}
+.more-btn:hover {
+    background-color: #FFCB37 !important;
+    color: black !important;
 }

@@ -3,16 +3,23 @@
   right: 50px;
   top: 20px;
   vertical-align: bottom;
+  overflow-x: hidden;
 }
 
 .navbar-nav {
   margin-left: 5% !important;
   margin-top: 1%;
+  /* transform: translateY(0px); */
 }
 
 .search-box {
   border-radius: 20px 0px 0px 20px !important;
   border: 2px solid #808080;
+}
+
+.input-group {
+  width: max(300px, 30vw) !important;
+  height: 45px !important;
 }
 
 .btn {
