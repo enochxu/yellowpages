@@ -2,6 +2,7 @@ import React from 'react';
 import Rating from '@mui/material/Rating';
 import BookmarkAddIcon from '@mui/icons-material/BookmarkAdd';
 import Button from '@mui/material/Button';
+import ReviewCard from './ReviewCard';
 import "./Restroom.css"
 
 function Restroom(name, gender) {
@@ -47,7 +48,10 @@ function Restroom(name, gender) {
         <div className='reviews'>
             <h3 className='review-header'>Reviews</h3>
             <div className="reviews-section">
-                <div className='review-bubbles'></div>
+                <div className='review-bubbles'>
+                    <ReviewCard name='Ackerman' rating='5' reviewText='#blessed' />
+                    
+                </div>
                 <Button variant="contained" size="medium">
                     More
                 </Button>
