@@ -48,8 +48,9 @@
 .reviews-section {
     background-color: #FDF5EA;
     height: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+}
+
+.review-bubbles {
+    display: grid;
+    columns: 2;
 }
