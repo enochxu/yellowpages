@@ -2,7 +2,7 @@ import * as React from "react";
 
 const ResultsPage = ({ term }) => {
   return (
-    <div>
+    <div className="results">
       <h2>Results for {term}</h2>
     </div>
   )
