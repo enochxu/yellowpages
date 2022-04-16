@@ -29,12 +29,6 @@ const Header = () => {
           <Button>Search</Button>
         </InputGroup>
       </Nav>
-      {/* <Navbar.Collapse id="responsive-navbar-nav"> */}
-      {/* <Nav className="me-auto">
-          <Nav.Link href="/howitworks">How it works</Nav.Link>
-          <Nav.Link href="/contact">Contact</Nav.Link>
-        </Nav> */}
-      {/* </Navbar.Collapse> */}
     </Navbar>
   );
 };
