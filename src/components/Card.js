@@ -2,8 +2,9 @@ import React from "react";
 import "./Card.css" 
 import Rating from '@mui/material/Rating';
 
-const Card = ({image, name, ratingValue, distance, genders}) => {
+const Card = ({image, name, ratingValue, distance, url}) => {
   return (
+    <a href={url}>
     <div className="card">
       <div class="cardImage">
         <img src={image}
@@ -17,6 +18,7 @@ const Card = ({image, name, ratingValue, distance, genders}) => {
       </div>
       <p>&#x1F6BD;{distance}</p>
     </div>
+    </a>
   )
 }
 

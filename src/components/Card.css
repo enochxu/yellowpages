@@ -21,6 +21,7 @@
 .card-rating {
     display: flex;
 }
+a, a:link, a:visited, a:hover, a:active { text-decoration: none; color: black;}
 
 .card h1 {
     font-size: 20px;
