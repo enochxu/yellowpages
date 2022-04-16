@@ -10,7 +10,7 @@ const Header = () => {
       <Navbar.Brand href="/">
         <img id="logo" src={logo} height="100" alt="yellowpages" />
       </Navbar.Brand>
-      <Nav aria-controls="responsive-navbar-nav">
+      <Nav className="search-bar">
         <Form className="d-flex">
           <FormControl
             type="search"
