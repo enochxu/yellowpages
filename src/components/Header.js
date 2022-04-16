@@ -15,7 +15,8 @@ import "./Header.css";
 const Header = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const handleSubmit = (e) => {
-    if (searchTerm) {
+    if (e.target.checkValidity() && searchTerm) {
+      e.preventDefault();
       console.log("urmom");
       navigate(`/searchResults?term=${searchTerm}`);
     }
@@ -27,16 +28,18 @@ const Header = () => {
         <img id="logo" src={logo} height="100" alt="yellowpages" />
       </Navbar.Brand>
       <Nav>
-        <InputGroup className="search-bar">
-          <FormControl
-            type="search"
-            placeholder="Search by location…"
-            className="search-box"
-            aria-label="Search"
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
-          <Button onClick={(e) => handleSubmit(e)}>Search</Button>
-        </InputGroup>
+        <Form onSubmit={(e) => handleSubmit(e)}>
+          <InputGroup className="search-bar">
+            <FormControl
+              type="search"
+              placeholder="Search by location…"
+              className="search-box"
+              aria-label="Search"
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+            <Button type="submit">Search</Button>
+          </InputGroup>
+        </Form>
       </Nav>
     </Navbar>
   );
