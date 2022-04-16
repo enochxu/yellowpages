@@ -2,8 +2,10 @@
     left: 50px;
     right: 50px;
     top: 20px;
+    vertical-align: bottom;
 }
 
 .form {
     width: 100%;
+    vertical-align: bottom;
 }

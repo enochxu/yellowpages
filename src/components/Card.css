@@ -1,0 +1,14 @@
+.card {
+    padding-top: 20px;
+    padding-left: 20px;
+    width: 300px;
+    height: 300px;
+}
+
+.card h1 {
+    font-size: 20px;
+}
+
+.react-multi-carousel-list {
+    /* width: 50%; */
+}
