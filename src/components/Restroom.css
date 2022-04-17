@@ -40,6 +40,7 @@
 .reviews {
     background-color: #FDF5EA;
     margin-top: 30px;
+    height: auto;
 }
 
 .review-header {
@@ -48,7 +49,6 @@
 }
 
 .reviews-section {
-    height: 400px;
     padding: 30px;
 }
 
