@@ -1,9 +1,15 @@
-import React from "react";
-import Restroom from "../../components/Restroom";
-import AddReview from "../../components/Addreview";
+import React, { useState } from 'react';
+import Restroom from "../../components/Restroom"
+import Rating from '@mui/material/Rating';
+import "../../components/AddReview.css"
+import { Button } from "react-bootstrap";
+// import AddReview from "../../components/Addreview"
+
 
 const Ackerman = () => {
-  const reviews = [
+
+  const [trigger, setTrigger] = useState(true);
+  const [reviews, setReviews] = useState([
     {
       name: "Ackerman Grand Ballroom",
       rating: "3.0",
@@ -35,16 +41,15 @@ const Ackerman = () => {
     {
       name: "Ackerman Grand Ballroom",
       rating: "5.0",
-      reviewText: "Grand, Mesmerizing, life changing! ",
-      type: "men",
-    },
-    {
-      name: "Ackerman Grand Ballroom",
-      rating: "5.0",
       reviewText: "Having a toilet to myself is the peak of defecatory luxury.",
       type: "gender-neutral",
     },
-  ];
+      'name': 'Ackerman Grand Ballroom',
+      'rating': '5.0',
+      'reviewText': 'Grand, Mesmerizing, life changing! ',
+      'type': 'men',
+    }
+  ])
 
   const images = [
     "https://i.ibb.co/mhjrN8m/ackerman-bathroom.jpg",
@@ -68,4 +73,72 @@ const Ackerman = () => {
   );
 };
 
-export default Ackerman;
+  function addReview(name, rating, reviewText, type){
+    const temp = reviews;
+    temp.push({'name' : name, 'rating': rating, 'reviewText': reviewText, 'type': type});
+    setReviews(temp);
+    setTrigger(!trigger);
+    console.log(reviews);
+  }
+
+  const AddReview = () => {
+    const [rating, setRating] = useState(0);
+    const [comment, setComment] = useState("");
+    const [gender, setGender] = useState("");
+  
+    function changeComment(e) {
+      setComment(e.target.value);
+    }
+
+    function submit(evt) {
+      if(gender === ""){
+        console.log("Invalid input");
+        return;
+      }
+      evt.preventDefault();
+      
+      addReview("Ackerman Grand Ballroom", rating.toString(), comment, gender);
+      setComment("");
+      setGender("");
+      setRating(0);
+    }
+  
+    return (
+      <div className="container"> 
+          <h2>Add a Review</h2>
+          <div className="buttons">
+              <Button className={(gender !== "gender-neutral" ? "selected-button" : "gender-button")} variant="contained" onClick={() => {setGender("gender-neutral")}}>Gender Neutral</Button>
+              <Button className={(gender !== "women" ? "selected-button" : "gender-button")} variant="contained" onClick={() => {setGender("women")}}>Female</Button>
+              <Button className={(gender !== "men" ? "selected-button" : "gender-button")} variant="contained" onClick={() => {setGender("men")}}>Male</Button>
+          </div>
+  
+              <h2>Your Rating</h2>
+  
+          <div className="rating">
+              <Rating
+              name="simple-controlled"
+              value={rating}
+              onChange={(event, newValue) => {
+              setRating(newValue);
+              }}/>
+          </div> 
+  
+          <div>
+              <form className="text" onSubmit={() => {console.log("A")}}>
+                  <textarea maxLength="1300" placeholder='Leave a comment...' value={comment} onChange={changeComment} className="textbox"></textarea>
+                  <Button className="gender-button" onClick={submit}>Submit</Button>
+              </form>
+          </div>
+      </div>
+    );
+  }
+
+    return (
+      <div className="ackerman">
+        <Restroom name='Ackerman Grand Ballroom' rating='3' reviews={reviews} images={images} />
+        <AddReview />
+      </div>
+    )
+  }
+  
+  export default Ackerman;

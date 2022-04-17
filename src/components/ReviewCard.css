@@ -5,4 +5,5 @@
   height: 330px;
   justify-self: center;
   padding: 10px;
+  pointer-events: none;
 }
