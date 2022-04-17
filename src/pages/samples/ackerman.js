@@ -42,6 +42,9 @@ const Ackerman = () => {
       'https://i.ibb.co/mhjrN8m/ackerman-bathroom.jpg',
       'https://i.ibb.co/26dh89h/ackerman2.jpg',
       'https://i.ibb.co/Yfg9H3B/ackermangrandmenstalls.jpg',
+      'https://i.ibb.co/3dgmFLS/womensackermangrandentrance.jpg',
+      'https://i.ibb.co/Fb48wcs/womensackermengrandsinksdiaper.jpg',
+
   ]
 
     return (

@@ -24,3 +24,9 @@ const reviews = [
         'type': 'men',
       },
   ]
+
+  const images = [
+    'https://i.ibb.co/GRmDHyy/ackerman1entrancemens.jpg',
+    'https://i.ibb.co/7WSbJwn/ackerman1sinksmens.jpg',
+    'https://i.ibb.co/H2NvxD5/ackerman1urinals.jpg',
+]

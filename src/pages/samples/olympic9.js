@@ -24,3 +24,8 @@ const reviews = [
         'type': 'men',
     }
   ]
+
+  const images = [
+    '​​https://i.ibb.co/4gSBtM4/olympic-sinks.jpg',
+    'https://i.ibb.co/qBrhD35/olympic9overview.jpg'
+]

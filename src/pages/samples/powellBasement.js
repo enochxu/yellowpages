@@ -18,3 +18,8 @@ const reviews = [
       'type': 'women',
     }
   ]
+
+  const images = [
+    'https://i.ibb.co/SxLzd7m/powellstalls.jpg',
+    'https://i.ibb.co/ns4L6pf/powellbasementsinkswomen.jpg'
+]

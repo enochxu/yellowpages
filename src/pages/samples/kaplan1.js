@@ -18,3 +18,9 @@ const reviews = [
       'type': 'men',
     }
   ]
+
+  const images = [
+    'https://i.ibb.co/7trYwd1/kaplan1sinkswomen.jpg',
+    'https://i.ibb.co/6sKbXx3/kaplan1stallswomen.jpg',
+    'https://i.ibb.co/QjcFhWS/kaplan1toiletwomens.jpg',
+]
