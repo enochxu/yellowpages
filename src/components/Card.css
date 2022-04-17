@@ -7,6 +7,12 @@
     border-radius: 20px;
 }
 
+.card:hover {
+    border-width: 2px;
+    border-color: #000;
+    transition: border-color 0.5s ease-in-out;
+}
+
 .cardImage {
     margin-bottom: 10px;
     margin-left: 5px;
@@ -22,7 +28,15 @@
 .card-rating {
     display: flex;
 }
-a, a:link, a:visited, a:hover, a:active { text-decoration: none; color: black;}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+    color: black;
+}
 
 .card h1 {
     font-size: 20px;

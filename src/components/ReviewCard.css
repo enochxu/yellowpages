@@ -1,4 +1,9 @@
 .review-card {
-  background-color: #FDF5EA;
+  background-color: #fff;
   border-radius: 20px;
+  width: 300px !important;
+  height: 330px;
+  justify-self: center;
+  padding: 10px;
+  pointer-events: none;
 }
