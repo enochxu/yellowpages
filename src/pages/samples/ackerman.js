@@ -10,11 +10,13 @@ const Ackerman = () => {
       'name': 'Ackerman Grand Ballroom',
       'rating': '5',
       'reviewText': '#blessed',
+      'type': 'men',
     },
     {
       'name': 'Ackerman Grand Ballroom',
       'rating': '2',
       'reviewText': 'hella nasty',
+      'type': 'women',
     }
   ]
 
