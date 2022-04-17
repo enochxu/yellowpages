@@ -70,9 +70,9 @@
 }
 
 .reviews {
-  /* background-color: #FDF5EA; */
-  margin-top: 30px;
-  height: auto;
+    background-color: #FDF5EA;
+    margin-top: 30px;
+    height: auto;
 }
 
 .review-header {
@@ -81,16 +81,17 @@
 }
 
 .reviews-section {
-  text-align: center;
-  /* background-color: #FDF5EA; */
-  padding: 30px;
+    text-align: center;
+    background-color: #FDF5EA;
+    padding: 30px;
 }
 
 .review-bubbles {
-  text-align: left;
-  display: flex;
-  justify-content: space-evenly;
-  padding-bottom: 10px;
+    text-align: left;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    padding-bottom: 10px;
 }
 
 .more-btn {
