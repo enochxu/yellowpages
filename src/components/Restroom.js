@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Rating from "@mui/material/Rating";
 import BookmarkAddIcon from "@mui/icons-material/BookmarkAdd";
 import { Button } from "react-bootstrap";
@@ -13,7 +13,15 @@ const Restroom = ({ name, rating, reviews, images }) => {
     women: true,
     men: true,
   });
-  const [toggled, setToggled] = useState("toggle-on");
+
+  const averageRating = () => {
+    let average = 0;
+    for (const review of reviews) {
+      average += parseInt(review["rating"]);
+    }
+    average /= reviews.length;
+    return average;
+  };
 
   const ToggleType = () => {
     return (
@@ -63,8 +71,8 @@ const Restroom = ({ name, rating, reviews, images }) => {
           <h1>{name}</h1>
           <div className="sub">
             <div className="rating">
-              <p>{rating}/5</p>
-              <Rating name="read-only" value={rating} readOnly />
+              <p>{averageRating()}/5</p>
+              <Rating name="read-only" value={averageRating()} readOnly />
             </div>
             <div className="save">
               <BookmarkAddIcon />
