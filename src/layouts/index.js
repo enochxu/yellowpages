@@ -4,9 +4,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import './layout.css';
 
-const Layout = ({ children }) => {
+const Layout = ({ children, location }) => {
+  console.log(location);
   return (
-    <div className="layout">
+    <div className="layout" style={location.pathname.startsWith("/samples") ? { backgroundColor: "#FDF5EA" } : {}}>
       <Header />
       <div className="body-box">
         {children}

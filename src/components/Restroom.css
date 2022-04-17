@@ -18,10 +18,12 @@
 }
 
 .restroom {
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    padding: 50px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  padding-top: 25px;
+  margin-top: 50px;
 }
 
 .sub {
@@ -59,8 +61,15 @@
     height: 300px;
 }
 
+.break {
+  background-color: #000000;
+  margin-bottom: 10px;
+  width: 35%;
+  height: 3px;
+}
+
 .reviews {
-    background-color: #FDF5EA;
+    /* background-color: #FDF5EA; */
     margin-top: 30px;
     height: auto;
 }
@@ -72,7 +81,7 @@
 
 .reviews-section {
     text-align: center;
-    background-color: #FDF5EA;
+    /* background-color: #FDF5EA; */
     padding: 30px;
 }
 
