@@ -71,8 +71,8 @@ const Restroom = ({ name, rating, reviews, images }) => {
           <h1>{name}</h1>
           <div className="sub">
             <div className="rating">
-              <p>{averageRating()}/5</p>
               <Rating name="read-only" value={averageRating()} readOnly />
+              <p>({averageRating()}/5)</p>
             </div>
             <div className="save">
               <BookmarkAddIcon />
