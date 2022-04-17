@@ -1,5 +1,7 @@
 .results {
+    padding-top: 25px;
     margin: 50px;
+    margin-bottom: 0px;
 }
 .results h2 {
     margin-bottom: 20px;
