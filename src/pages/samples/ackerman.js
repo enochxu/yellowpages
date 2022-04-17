@@ -1,5 +1,7 @@
 import React from "react"
 import Restroom from "../../components/Restroom"
+import AddReview from "../../components/Addreview"
+
 
 const Ackerman = () => {
 
@@ -25,6 +27,7 @@ const Ackerman = () => {
     return (
       <div className="ackerman">
         <Restroom name='Ackerman' rating='3' reviews={reviews} images={images} />
+        <AddReview />
       </div>
     )
   }
