@@ -79,9 +79,9 @@ const Restroom = ({name, rating, reviews, images}) => {
         <div className="photo-section">
           <h3>Photos</h3>
           <div className="photo-gallery">
-            {images.map(images => (
-                <img className='photos' src={images} alt='restroom'/>
-            ))}            
+            {images.map((images) => (
+              <img className="photos" src={images} alt="restroom" />
+            ))}
           </div>
         </div>
       </div>
@@ -89,14 +89,16 @@ const Restroom = ({name, rating, reviews, images}) => {
         <h3 className="review-header">Reviews</h3>
         <div className="reviews-section">
           <div className="review-bubbles">
-            {reviews.map(reviews => (
+            {reviews.map((reviews) =>
+              restroomType[reviews.type] ? (
                 <ReviewCard
-                    name={reviews.name}
-                    rating={reviews.rating}
-                    reviewText={reviews.reviewText}
-                    type={reviews.type}
+                  name={reviews.name}
+                  rating={reviews.rating}
+                  reviewText={reviews.reviewText}
+                  type={reviews.type}
                 />
-            ))}
+              ) : null
+            )}
           </div>
           <Button className="more-btn" variant="contained" size="medium">
             More
