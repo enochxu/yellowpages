@@ -3,7 +3,7 @@ import Rating from '@mui/material/Rating';
 import "./AddReview.css"
 import { Button } from "react-bootstrap";
 
-const AddReview = ({}) => {
+const AddReview = ({onSubmit}) => {
   const [value, setValue] = useState(0);
   const [gender, setGender] = useState("Gender-Neutral");
   const [comment, setComment] = useState("");
@@ -18,10 +18,7 @@ const AddReview = ({}) => {
 
   return (
     <div className="container">
-
-            <h2>Add a Review</h2>
-        
-
+        <h2>Add a Review</h2>
         <div className="buttons">
             <Button className={(gender != "Male" ? "selected-button" : "gender-button")} variant="contained" onClick={() => {setGender("Male")}}>Male</Button>
             <Button className={(gender != "Female" ? "selected-button" : "gender-button")} variant="contained" onClick={() => {setGender("Female")}}>Female</Button>
@@ -40,7 +37,7 @@ const AddReview = ({}) => {
         </div>
 
         <div>
-            <form className="text">
+            <form className="text" onSubmit={onSubmit}>
                 <textarea maxLength="1300" placeholder='Leave a comment...' onChange={changeComment} className="textbox"></textarea>
                 <Button className="gender-button" onClick={addReview}>Submit</Button>
             </form>
