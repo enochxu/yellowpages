@@ -1,55 +1,58 @@
 import React, { useState } from "react";
 import Rating from "@mui/material/Rating";
 import BookmarkAddIcon from "@mui/icons-material/BookmarkAdd";
-import Button from "@mui/material/Button";
-import ToggleButton from "@mui/material/ToggleButton";
-import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { Button } from "react-bootstrap";
 import ReviewCard from "./ReviewCard";
 import "./Restroom.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: "#000000",
-    },
-  },
-});
-
 const Restroom = ({ name, rating, reviews }) => {
   const [value, setValue] = React.useState(4);
-  const [restroomType, setRestroomType] = useState([
-    "gender-neutral",
-    "women",
-    "men",
-  ]);
+  const [restroomType, setRestroomType] = useState({
+    "gender-neutral": true,
+    women: true,
+    men: true,
+  });
+  const [toggled, setToggled] = useState("toggle-on");
 
   const ToggleType = () => {
-    const handleRestroomType = (event, newRestroomType) => {
-      setRestroomType(newRestroomType);
-    };
-
     return (
-      <ThemeProvider theme={theme}>
-        <ToggleButtonGroup
-          value={restroomType}
-          onChange={handleRestroomType}
-          color="primary"
-          size="small"
-          aria-label="toggle displaying gender neutral, women's, or men's restrooms"
+      <div className="restroom-toggles">
+        <Button
+          className={`type-toggle toggled-${restroomType["gender-neutral"]}`}
+          onClick={() => {
+            setRestroomType({
+              ...restroomType,
+              "gender-neutral": !restroomType["gender-neutral"],
+            });
+          }}
         >
-          <ToggleButton value="gender-neutral" aria-label="gender neutral">
-            Gender-Neutral <i class="bi-gender-ambiguous"></i>
-          </ToggleButton>
-          <ToggleButton value="women" aria-label="women">
-            Women <i class="bi-gender-female"></i>
-          </ToggleButton>
-          <ToggleButton value="men" aria-label="men">
-            Men <i class="bi-gender-male"></i>
-          </ToggleButton>
-        </ToggleButtonGroup>
-      </ThemeProvider>
+          <i class="bi-gender-ambiguous"></i> Gender Neutral
+        </Button>
+        <Button
+          className={`type-toggle toggled-${restroomType.women}`}
+          onClick={() =>
+            setRestroomType({
+              ...restroomType,
+              women: !restroomType.women,
+            })
+          }
+        >
+          <i class="bi-gender-female"></i> Female
+        </Button>
+        <Button
+          className={`type-toggle toggled-${restroomType.men}`}
+          toggle={restroomType.men}
+          onClick={() =>
+            setRestroomType({
+              ...restroomType,
+              men: !restroomType.men,
+            })
+          }
+        >
+          <i class="bi-gender-male"></i> Male
+        </Button>
+      </div>
     );
   };
 
@@ -59,7 +62,7 @@ const Restroom = ({ name, rating, reviews }) => {
         <div className="header">
           <div className="title">
             <h2>{name}</h2>
-            <span className="toggle">
+            <span className="restroom-toggles">
               <ToggleType />
             </span>
           </div>
