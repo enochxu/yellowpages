@@ -46,7 +46,7 @@ const Ackerman = () => {
 
     return (
       <div className="ackerman">
-        <Restroom name='Ackerman' rating='3' reviews={reviews} images={images} />
+        <Restroom name='Ackerman Grand Ballroom' rating='3' reviews={reviews} images={images} />
         <AddReview />
       </div>
     )

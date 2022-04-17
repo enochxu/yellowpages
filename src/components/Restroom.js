@@ -77,7 +77,7 @@ const Restroom = ({name, rating, reviews, images}) => {
           </div>
         </div>
         <div className="photo-section">
-          <h3>Photos</h3>
+          <h2>Photos</h2>
           <div className="photo-gallery">
             {images.map(images => (
                 <img className='photos' src={images} alt='restroom'/>
@@ -86,7 +86,7 @@ const Restroom = ({name, rating, reviews, images}) => {
         </div>
       </div>
       <div className="reviews">
-        <h3 className="review-header">Reviews</h3>
+        <h2 className="review-header">Reviews</h2>
         <div className="reviews-section">
           <div className="review-bubbles">
             {reviews.map(reviews => (
@@ -98,9 +98,9 @@ const Restroom = ({name, rating, reviews, images}) => {
                 />
             ))}
           </div>
-          <Button className="more-btn" variant="contained" size="medium">
+          {/* <Button className="more-btn" variant="contained" size="medium">
             More
-          </Button>
+          </Button> */}
         </div>
       </div>
     </>
