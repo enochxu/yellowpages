@@ -23,9 +23,9 @@ const AddReview = ({}) => {
         
 
         <div className="buttons">
-            <Button className={(gender == "Male" ? "selected-button" : "gender-button")} variant="contained" onClick={() => {setGender("Male")}}>Male</Button>
-            <Button className={(gender == "Female" ? "selected-button" : "gender-button")} variant="contained" onClick={() => {setGender("Female")}}>Female</Button>
-            <Button className={(gender == "Gender Neutral" ? "selected-button" : "gender-button")} variant="contained" onClick={() => {setGender("Gender Neutral")}}>Gender Neutral</Button>
+            <Button className={(gender != "Male" ? "selected-button" : "gender-button")} variant="contained" onClick={() => {setGender("Male")}}>Male</Button>
+            <Button className={(gender != "Female" ? "selected-button" : "gender-button")} variant="contained" onClick={() => {setGender("Female")}}>Female</Button>
+            <Button className={(gender != "Gender Neutral" ? "selected-button" : "gender-button")} variant="contained" onClick={() => {setGender("Gender Neutral")}}>Gender Neutral</Button>
         </div>
 
             <h2>Your Rating</h2>

@@ -61,7 +61,7 @@ const Restroom = ({name, rating, reviews, images}) => {
       <div className="restroom">
         <div className="header">
           <div className="title">
-            <h2>{name}</h2>
+            <h1>{name}</h1>
             <span className="restroom-toggles">
               <ToggleType />
             </span>
