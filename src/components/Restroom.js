@@ -6,7 +6,7 @@ import ReviewCard from "./ReviewCard";
 import "./Restroom.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
-const Restroom = ({ name, rating, reviews }) => {
+const Restroom = ({name, rating, reviews, images}) => {
   const [value, setValue] = React.useState(4);
   const [restroomType, setRestroomType] = useState({
     "gender-neutral": true,
@@ -79,16 +79,9 @@ const Restroom = ({ name, rating, reviews }) => {
         <div className="photo-section">
           <h3>Photos</h3>
           <div className="photo-gallery">
-            <img
-              src="https://i.ibb.co/2c90ZNw/ackerman-bathroom.jpg"
-              className="photos"
-              alt="bathroom"
-            />
-            <img className="photos" alt="bathroom" />
-            <img className="photos" alt="bathroom" />
-            <img className="photos" alt="bathroom" />
-            <img className="photos" alt="bathroom" />
-            <img className="photos" alt="bathroom" />
+            {images.map(image => (
+                <img className='photos' src={image} alt='restroom'/>
+            ))}            
           </div>
         </div>
       </div>

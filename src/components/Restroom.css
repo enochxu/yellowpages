@@ -60,26 +60,37 @@
 }
 
 .reviews {
-  margin-top: 30px;
+    background-color: #FDF5EA;
+    margin-top: 30px;
+    height: auto;
 }
 
 .review-header {
-  padding-left: 50px;
+    padding-top: 30px;
+    padding-left: 50px;
 }
 
 .reviews-section {
-  background-color: #fdf5ea;
-  height: 400px;
-  padding: 30px;
+    text-align: center;
+    background-color: #FDF5EA;
+    padding: 30px;
 }
 
 .review-bubbles {
-  display: flex;
-  justify-content: space-evenly;
-  padding-bottom: 10px;
+    text-align: left;
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 10px;
 }
 
 .more-btn {
-  width: 5vw;
-  margin-left: 45vw;
+    width: 5vw;
+    background-color: white !important;
+    color: black !important;
+    text-transform: unset !important;
+    border-radius:20px !important;
+}
+.more-btn:hover {
+    background-color: #FFCB37 !important;
+    color: black !important;
 }
