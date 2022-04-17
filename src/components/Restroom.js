@@ -16,13 +16,16 @@ const Restroom = ({ name, rating, reviews, images }) => {
 
   const averageRating = () => {
     let average = 0;
+
     for (const review of reviews) {
       average += parseInt(review["rating"]);
     }
     average /= reviews.length;
+    average = Math.round(average * 10) / 10;
+
     return average;
   };
-
+  
   const ToggleType = () => {
     return (
       <div className="restroom-toggles">
