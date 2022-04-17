@@ -7,6 +7,7 @@ import "./Restroom.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 const Restroom = ({ name, rating, reviews, images }) => {
+  const [averageRating, setAverageRating] = useState(0);
   const [value, setValue] = React.useState(4);
   const [restroomType, setRestroomType] = useState({
     "gender-neutral": true,

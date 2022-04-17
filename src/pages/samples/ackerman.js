@@ -1,11 +1,11 @@
-import React from "react"
+import React, { useState } from "react"
 import Restroom from "../../components/Restroom"
 import AddReview from "../../components/Addreview"
 
 
 const Ackerman = () => {
-
-  const reviews = [
+  const [trigger, setTrigger] = useState(false);
+  const [reviews, setReviews] = useState([
     {
       'name': 'Ackerman Grand Ballroom',
       'rating': '3.0',
@@ -36,7 +36,7 @@ const Ackerman = () => {
       'reviewText': 'Grand, Mesmerizing, life changing! ',
       'type': 'men',
     }
-  ]
+  ]);
 
   const images = [
       'https://i.ibb.co/mhjrN8m/ackerman-bathroom.jpg',
@@ -47,12 +47,20 @@ const Ackerman = () => {
 
   ]
 
-    return (
-      <div className="ackerman">
-        <Restroom name='Ackerman Grand Ballroom' rating='3' reviews={reviews} images={images} />
-        <AddReview />
-      </div>
-    )
+  const createReview = (name, rating, reviewText, type) => {
+    let temp = reviews;
+    temp.push({'name': 'Ackerman Grand Ballroom', 'rating': rating, 'reviewText': reviewText, 'type': type});
+    setReviews(temp);
+    setTrigger(!trigger);
+    console.log(temp);
   }
+
+  return (
+    <div className="ackerman">
+      <Restroom name='Ackerman Grand Ballroom' rating='3' reviews={reviews} images={images} />
+      <AddReview createReview={createReview}/>
+    </div>
+  )
+}
   
   export default Ackerman;

@@ -3,7 +3,7 @@ import Rating from '@mui/material/Rating';
 import "./AddReview.css"
 import { Button } from "react-bootstrap";
 
-const AddReview = ({}) => {
+const AddReview = ({ createReview }) => {
   const [value, setValue] = useState(0);
   const [gender, setGender] = useState("Gender-Neutral");
   const [comment, setComment] = useState("");
@@ -14,6 +14,7 @@ const AddReview = ({}) => {
 
   function addReview(evt) {
     evt.preventDefault();
+    createReview("bruh", value, comment, gender);
   }
 
   return (
