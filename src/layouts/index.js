@@ -7,7 +7,7 @@ import './layout.css';
 const Layout = ({ children, location }) => {
   console.log(location);
   return (
-    <div className="layout" style={location.pathname.startsWith("/samples") ? { backgroundColor: "#FDF5EA" } : {}}>
+    <div className="layout" style={location.pathname != '/' ? { backgroundColor: "#FDF5EA" } : {}}>
       <Header />
       <div className="body-box">
         {children}
