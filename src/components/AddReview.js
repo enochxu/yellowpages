@@ -4,7 +4,7 @@ import "./AddReview.css"
 import { Button } from "react-bootstrap";
 
 const AddReview = ({}) => {
-  const [value, setValue] = useState(2);
+  const [value, setValue] = useState(0);
   const [gender, setGender] = useState("Gender-Neutral");
   const [comment, setComment] = useState("");
 
@@ -23,9 +23,9 @@ const AddReview = ({}) => {
         
 
         <div className="buttons">
-            <Button className="gender-button" onClick={() => {setGender("Male")}}>Male</Button>
-            <Button className="gender-button" onClick={() => {setGender("Female")}}>Female</Button>
-            <Button className="gender-button" onClick={() => {setGender("Gender Neutral")}}>Gender Neutral</Button>
+            <Button className={(gender == "Male" ? "selected-button" : "gender-button")} variant="contained" onClick={() => {setGender("Male")}}>Male</Button>
+            <Button className={(gender == "Female" ? "selected-button" : "gender-button")} variant="contained" onClick={() => {setGender("Female")}}>Female</Button>
+            <Button className={(gender == "Gender Neutral" ? "selected-button" : "gender-button")} variant="contained" onClick={() => {setGender("Gender Neutral")}}>Gender Neutral</Button>
         </div>
 
             <h2>Your Rating</h2>
