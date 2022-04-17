@@ -6,7 +6,7 @@ import ReviewCard from "./ReviewCard";
 import "./Restroom.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
-const Restroom = ({name, rating, reviews, images}) => {
+const Restroom = ({ name, rating, reviews, images }) => {
   const [value, setValue] = React.useState(4);
   const [restroomType, setRestroomType] = useState({
     "gender-neutral": true,
@@ -60,12 +60,7 @@ const Restroom = ({name, rating, reviews, images}) => {
     <>
       <div className="restroom">
         <div className="header">
-          <div className="title">
-            <h1>{name}</h1>
-            <span className="restroom-toggles">
-              <ToggleType />
-            </span>
-          </div>
+          <h1>{name}</h1>
           <div className="sub">
             <div className="rating">
               <p>{rating}/5</p>
@@ -77,30 +72,35 @@ const Restroom = ({name, rating, reviews, images}) => {
           </div>
         </div>
         <div className="photo-section">
-          <h3>Photos</h3>
+          <h2>Photos</h2>
           <div className="photo-gallery">
-            {images.map(images => (
-                <img className='photos' src={images} alt='restroom'/>
-            ))}            
+            {images.map((images) => (
+              <img className="photos" src={images} alt="restroom" />
+            ))}
           </div>
         </div>
       </div>
       <div className="reviews">
-        <h3 className="review-header">Reviews</h3>
+        <h2 className="review-header">Reviews</h2>
+        <div className="display-toggles">
+          <ToggleType />
+        </div>
         <div className="reviews-section">
           <div className="review-bubbles">
-            {reviews.map(reviews => (
+            {reviews.map((reviews) =>
+              restroomType[reviews.type] ? (
                 <ReviewCard
-                    name={reviews.name}
-                    rating={reviews.rating}
-                    reviewText={reviews.reviewText}
-                    type={reviews.type}
+                  name={reviews.name}
+                  rating={reviews.rating}
+                  reviewText={reviews.reviewText}
+                  type={reviews.type}
                 />
-            ))}
+              ) : null
+            )}
           </div>
-          <Button className="more-btn" variant="contained" size="medium">
+          {/* <Button className="more-btn" variant="contained" size="medium">
             More
-          </Button>
+          </Button> */}
         </div>
       </div>
     </>
