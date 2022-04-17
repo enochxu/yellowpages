@@ -70,7 +70,7 @@
 }
 
 .reviews {
-    /* background-color: #FDF5EA; */
+    background-color: #FDF5EA;
     margin-top: 30px;
     height: auto;
 }
@@ -82,14 +82,15 @@
 
 .reviews-section {
     text-align: center;
-    /* background-color: #FDF5EA; */
+    background-color: #FDF5EA;
     padding: 30px;
 }
 
 .review-bubbles {
     text-align: left;
-    display: flex;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
     padding-bottom: 10px;
 }
 
