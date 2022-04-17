@@ -1,62 +1,62 @@
 .type-toggle {
-  border: 0px !important;
-  background-color: #ffcb37 !important;
-  border-radius: 20px 20px 20px 20px !important;
-  border: 1px solid #ffcb37 !important;
-  color: black !important;
-  margin-right: 8px;
+    border: 0px !important;
+    background-color: #ffcb37 !important;
+    border-radius: 20px 20px 20px 20px !important;
+    border: 1px solid #ffcb37 !important;
+    color: black !important;
+    margin-right: 8px;
 }
 
 .toggled-false {
-  background-color: #ffffff !important;
-  border: 1px solid black !important;
+    background-color: #ffffff !important;
+    border: 1px solid black !important;
 }
 
 .restroom-toggles {
-  margin-top: 1%;
-  margin-bottom: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
 }
 
 .restroom {
-  background-color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  padding: 50px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
 }
 
 .sub {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 
 .rating {
-  display: flex;
-  font-weight: bold;
+    display: flex;
+    font-weight: bold;
 }
 
 .toggle {
-  margin-left: 10%;
+    margin-left: 10%;
 }
 
 .photo-section {
-  margin-top: 30px;
+    margin-top: 30px;
 }
 
 .photo-gallery {
-  border: 1px solid #000000;
-  box-sizing: border-box;
-  border-radius: 10px;
-  padding-left: 0.5%;
-  padding-right: 0.5%;
-  display: flex;
-  justify-content: space-around;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+    display: flex;
+    justify-content: space-around;
 }
 
 .photos {
-  background-color: #000000;
-  margin: 20px 0.5% 20px 0.5%;
-  width: 15%;
-  height: 300px;
+    background-color: #000000;
+    margin: 20px 0.5% 20px 0.5%;
+    width: 15%;
+    height: 300px;
 }
 
 .reviews {
@@ -88,8 +88,9 @@
     background-color: white !important;
     color: black !important;
     text-transform: unset !important;
-    border-radius:20px !important;
+    border-radius: 20px !important;
 }
+
 .more-btn:hover {
     background-color: #FFCB37 !important;
     color: black !important;
