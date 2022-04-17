@@ -8,6 +8,7 @@ import { Button } from "react-bootstrap";
 
 const Ackerman = () => {
 
+  const [trigger, setTrigger] = useState(true);
   const [reviews, setReviews] = useState([
     {
       'name': 'Ackerman Grand Ballroom',
@@ -54,6 +55,7 @@ const Ackerman = () => {
     const temp = reviews;
     temp.push({'name' : name, 'rating': rating, 'reviewText': reviewText, 'type': type});
     setReviews(temp);
+    setTrigger(!trigger);
     console.log(reviews);
   }
 
@@ -83,9 +85,9 @@ const Ackerman = () => {
       <div className="container"> 
           <h2>Add a Review</h2>
           <div className="buttons">
-              <Button className={(gender !== "men" ? "selected-button" : "gender-button")} variant="contained" onClick={() => {setGender("men")}}>Male</Button>
-              <Button className={(gender !== "women" ? "selected-button" : "gender-button")} variant="contained" onClick={() => {setGender("women")}}>Female</Button>
               <Button className={(gender !== "gender-neutral" ? "selected-button" : "gender-button")} variant="contained" onClick={() => {setGender("gender-neutral")}}>Gender Neutral</Button>
+              <Button className={(gender !== "women" ? "selected-button" : "gender-button")} variant="contained" onClick={() => {setGender("women")}}>Female</Button>
+              <Button className={(gender !== "men" ? "selected-button" : "gender-button")} variant="contained" onClick={() => {setGender("men")}}>Male</Button>
           </div>
   
               <h2>Your Rating</h2>
