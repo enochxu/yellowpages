@@ -16,13 +16,13 @@ const images = [
 const DATA = [
   {
     'name': NAME,
-    'rating': '3.0',
+    'rating': '1.0',
     'reviewText': 'Honestly pretty bleh. Don’t let the number of stalls fool you. The lighting is pretty uneven so some stalls are super dark while others are really bright. On top of that, it took me a solid minute to figure out how to lock the stall because the locks require a lot of rotations before the tongue lock pops out.',
     'type': 'women',
   },
   {
     'name': NAME,
-    'rating': '5.0',
+    'rating': '4.0',
     'reviewText': 'This bathroom has more stalls than my instagram followers. Potential party venue.',
     'type': 'men',
   },
